@@ -1,0 +1,61 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/create_account.css') }}">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3>Xoş Gəldiniz</h3>
+            <p>Öz xəritəni hazırla!</p>
+        </div>
+        <div class="col-md-9 register-right">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <form action="{{url_for('create_account')}}" method="POST">
+                        <h3 class="register-heading">Hesab Yarat</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <p>
+                                        {{ form.name.label }}<br> {{ form.name(size=32) }}
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.surname.label }}<br> {{ form.surname(size=32) }}
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        {{ form.password.label }}<br> {{ form.password(size=32) }}
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        {{ form.confirm_password.label }}<br> {{ form.confirm_password(size=32) }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <p>
+                                        {{ form.email.label }}<br> {{ form.email(size=32) }}
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        {{ form.phone.label }}<br> {{ form.phone(size=32) }}
+                                    </p>
+                                </div>
+                                <p>{{ form.submit() }}</p>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,213 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/create_map_common.css">
+    <link rel="stylesheet" href="css/create_map_style.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.34/dijit/themes/nihilo/nihilo.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.34/esri/css/esri.css">
+
+    <script src="https://js.arcgis.com/3.34/"></script>
+    <script src="/exmaple.js"></script>
+
+
+</head>
+
+<body>
+    </div>
+    <section id="top-nav-bar">
+        <div class="container">
+            <div class="row flex align-items-center justify-content-between">
+                <div class="col-2">
+                    <div class="create-map">
+                        <h1>Create Map</h1>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="newmap-signin ">
+                        <ul class="flex justify-content-end">
+                            <li><a href="">My Maps</a></li>
+                            <li><a href="../Template/profile.html">My Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main-nav-bar">
+        <div class="container">
+            <div class="row flex flex-direction-row">
+                <div class="col-4">
+                    <div class="left-nav-bar flex flex-direction-row align-items-center">
+                        <div class="col-3">
+                            <div class="left-nav-bar-items">
+                                <ul>
+                                    <a href="">
+                                        <img src="/images/create_map_images/details.png" alt="">
+                                        <span class="nav-color nav-font-size nav-font-type">Details</span>
+                                    </a>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="left-nav-bar-items">
+                                <ul>
+                                    <a href="">
+                                        <img src="/images/create_map_images/addContent.png" alt="">
+                                        <span class="nav-color nav-font-size nav-font-type ">Add Data</span>
+                                    </a>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="left-nav-bar-items">
+                                <ul>
+                                    <a href="">
+                                        <img src="/images/create_map_images/basemap.png" alt="">
+                                        <span class="nav-color nav-font-size nav-font-type">Basemap</span>
+                                    </a>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="right-nav-bar flex flex-direction-row justify-content-end align-items-center">
+                        <div class="col-1">
+                            <div class="right-nav-bar-items">
+                                <ul>
+                                    <a href="">
+                                        <img src="/images/create_map_images/save.png" alt="">
+                                        <span class="nav-color nav-font-size nav-font-type">Save</span>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="right-nav-bar-items">
+                                <ul>
+                                    <a href="">
+                                        <img src="/images/create_map_images/linkTo.png" alt="">
+                                        <span class="nav-color nav-font-size nav-font-type">Share</span>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="right-nav-bar-items">
+                                <ul>
+                                    <a href="">
+                                        <img src="/images/create_map_images/print.png" alt="">
+                                        <span class="nav-color nav-font-size nav-font-type">Print</span>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="right-nav-bar-items">
+                                <ul>
+                                    <a href="">
+                                        <img src="/images/create_map_images/measure.png" alt="">
+                                        <span class="nav-color nav-font-size nav-font-type">Measure</span>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="right-nav-bar-items">
+                                <input type="text" id="input-adress-search" placeholder="Find Adress or Place">
+                                <a href="">
+                                    <span class="fa fa-search color-gray" aria-hidden="true"></span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="object-navigation-panel">
+        <div class="nav-panel-and-googlemap flex flex-direction-row">
+            <div class="container-nav-panel ">
+                <div class="row-panel flex flex-direction-column">
+                    <div class="col-12">
+                        <div class="navigation-panel-menu-bar flex flex-direction-row">
+                            <div class="col-3">
+                                <div class="navigation-panel-items">
+                                    <ul>
+                                        <a href="">
+                                            <img src="/images/create_map_images/info.png" alt="">
+                                            <span class="nav-color nav-font-size nav-font-type">About</span>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="navigation-panel-items">
+                                    <ul>
+                                        <a href="">
+                                            <img src="/images/create_map_images/details.png" alt="">
+                                            <span class="nav-color nav-font-size nav-font-type"> Content</span>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="navigation-panel-items">
+                                    <ul>
+                                        <a href="">
+                                            <img src="/images/create_map_images/legend.png" alt="">
+                                            <span class="nav-color nav-font-size nav-font-type">Legend</span>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <div class="navigation-panel-info">
+                                <h4>Öz şəxsi xəritəni yarat</h4>
+                                <span>Xəritə yaratmaq çox asandır. Bunun üçün aşağıdakı addımları izlə</span>
+                                <h3>1. Öz ərazini seç</h3>
+                                <span class="nav-panel-info-space flex">Xəritədə seçdiyin ərazinin üzərinə yaxınlaş və ya adresə görə axtarış ver</span>
+                                <h3> 2. Nələri görüntüləyəcəyinə qərar ver</h3>
+                                <span class="nav-panel-info-space">Əvvəlcə</span>
+                                <img src="/images/create_map_images/basemap.png" alt="">
+                                <span> basemap-i seçirik daha sonra</span>
+                                <img src="/images/create_map_images/addContent.png" alt="">
+                                <span class="nav-panel-info-space">laylarımızı basemap-in üzərinə əlavə edirik.</span>
+                                <h3>3. Daha çox xəritələr əlavə et</h3>
+                                <img src="/images/create_map_images/addContent.png" class="nav-panel-info-space" alt="">
+                                <span>Hazır xəritələr əlavə et və üzərində</span>
+                                <span class="nav-panel-info-space"> dəyişikliklər etməyə başla</span>
+                                <br>
+                                <span class="nav-panel-info-space flex">Məlumat əlavə etmək haqqında əlavə məlumat üçün bu linkə daxil olun</span>
+                                <h3>4. Xəritəni yaddaşa ver və paylaş</h3>
+                                <span class="nav-panel-info-space flex">Xəritənə ad ver, açıqlama yaz və digər insanlarla paylaş</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-googlemap">
+                <div class="row-map">
+                    <div class="googlemap">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=baku%20state%20university&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html
